@@ -10,9 +10,9 @@ const ingredients = [
 
 const liElem = document.getElementById("ingredients");
 
+let html = "";
 ingredients.forEach(function(ingredient) {
-  const li = document.createElement("li");
-  li.textContent = ingredient;
-  li.classList.add("item");
-  liElem.appendChild(li);
+  html += `<li class="item">${ingredient}</li>`;
 });
+liElem.innerHTML = html;
+

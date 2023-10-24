@@ -5,11 +5,11 @@ const valueEl = document.querySelector('#value');
 let counterValue = 0;
 
 decrementBtn.addEventListener('click', () => {
-  counterValue--;
+  counterValue -= 1;
   valueEl.textContent = counterValue;
 });
 
 incrementBtn.addEventListener('click', () => {
-  counterValue++;
+  counterValue += 1;
   valueEl.textContent = counterValue;
 });

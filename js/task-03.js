@@ -24,3 +24,6 @@ const createGallery = (data) => {
 };
 
 createGallery(images);
+
+gallery.style.display = 'flex';
+gallery.style.listStyle='none';
