@@ -8,11 +8,15 @@ const ingredients = [
 ];
 
 
-const liElem = document.getElementById("ingredients");
+const ulElem = document.getElementById("ingredients");
 
-let html = "";
-ingredients.forEach(function(ingredient) {
-  html += `<li class="item">${ingredient}</li>`;
+const elements = ingredients.map(function(ingredient) {
+  const liElem = document.createElement("li");
+  liElem.textContent = ingredient;
+  liElem.classList.add("item");
+  return liElem;
 });
-liElem.innerHTML = html;
+
+    ulElem.append(...elements);
+
 
